@@ -7,8 +7,17 @@ namespace RazorPagesTestSample.Data
     {
         public int Id { get; set; }
 
-        [Required]
-        [DataType(DataType.Text)]
+       
+        /// <summary>
+        /// Gets or sets the message text.
+        /// </summary>
+        /// <value>
+        /// The message text, limited to 200 characters.
+        /// </value>
+        /// <remarks>
+        /// There's a 200 character limit on messages. Please shorten your message if it exceeds this limit.
+        /// </remarks>
+        /// /// /// /// /// /// /// /// /// [DataType(DataType.Text)]
         [StringLength(200, ErrorMessage = "There's a 200 character limit on messages. Please shorten your message.")]
         public string Text { get; set; }
     }
